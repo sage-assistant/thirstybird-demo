@@ -2717,6 +2717,7 @@ function showToast(msg) {
     if (clickCount >= 5) {
       icon.classList.add('dancing');
       secret.classList.add('show');
+      if(window.trackEvent)trackEvent('easter_egg_dancing_bird');
       setTimeout(() => {
         icon.classList.remove('dancing');
         secret.classList.remove('show');
@@ -2774,5 +2775,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 </script>
+<script src="http://100.92.103.44:3847/tracker.js" data-site="thirstybird-demo"></script>
 </body>
 </html>
